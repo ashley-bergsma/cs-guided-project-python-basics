@@ -13,5 +13,12 @@ number([]) # => []
 number(["a", "b", "c"]) # => ["1: a", "2: b", "3: c"]
 """
 def number(lines):
-    # Your code here
+    counter = 1
+    output = []
+    for line in lines: 
+        output.append(f"{counter}: {line}")
+        counter += 1
+    return output
+
+print(number(['one', 'two', 'three']))
 

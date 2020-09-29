@@ -33,5 +33,9 @@ The digit frequencies are 1 x `0`, 9 x `1`, 6 x `2`, etc.
 and so the method would return `[1,9,6,3,0,1,1,1,1,1]`
 """
 def paint_letterboxes(start, finish):
-    # Your code here
-
+    result = [0] * 10
+    for a in range(start, finish + 1):
+        for i in list(str(a)):
+            result[int(i)] += 1
+    return result
+print(paint_letterboxes(125, 132))
